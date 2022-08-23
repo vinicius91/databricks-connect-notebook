@@ -1,0 +1,4 @@
+.vscode
+pgdata
+workspace/.*
+workspace/*.jar

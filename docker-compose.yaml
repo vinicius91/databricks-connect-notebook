@@ -1,0 +1,31 @@
+services:
+    # Source databases
+    postgres:
+        image: postgres:13
+        container_name: postgres
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_DB=public
+        volumes:
+            - ./pgdata:/var/lib/postgresql/data:rw
+        restart: always
+        ports:
+            - "5432:5432"
+
+    # Optional Jupyter environment
+    notebook:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: spark-notebook
+        volumes:
+            - ./workspace:/home/viniro:rw
+        environment:
+            IS_NOTEBOOK_ENV: 1
+            PYSPARK_SUBMIT_ARGS: --packages org.postgresql:postgresql:42.2.22 --driver-class-path /home/viniro/postgresql-42.2.22.jar pyspark-shell
+        command: sh -c "cd /home/viniro; wget -nc https://jdbc.postgresql.org/download/postgresql-42.2.22.jar; tini -g -- start-notebook.sh"
+        depends_on:
+            - postgres
+        ports:
+            - "8888:8888"

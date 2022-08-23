@@ -1,0 +1,7 @@
+{
+  "host": "https://yourhost.databricks.com",
+  "token": "yourtoken",
+  "cluster_id": "cluster_id",
+  "org_id": "0",
+  "port": "15001"
+}

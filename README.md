@@ -6,11 +6,11 @@ This can be used to access your Databricks environment from your IDE and send jo
 
 ## Execution
 
-1. Build the docker environment;
-2. `docker compose up`
-3. Access the notebook container shell and configure your `databricks-connect` setup;
-4. Connect your IDE to the notebook server;
-5. Have fun!
+1. Create a `.databricks-connect` file under the `workspace` folder with your information.;
+2. Build the docker environment;
+3. `docker compose up`
+5. Connect your IDE to the notebook server;
+6. Have fun!
 
 
 ## Sources 
