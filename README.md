@@ -8,6 +8,10 @@ A Docker Image that provides a Jupyter notebook server with support to Databrick
 
 This can be used to access your Databricks environment from your IDE and send jobs directly into a cluster.
 
+## Usage
+
+You can find an environment setup example at [databricks-connect-notebook-sample-env](https://github.com/vinicius91/databricks-connect-notebook-sample-env)
+
 ## Sources
 
 This environment is based on:
