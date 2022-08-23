@@ -1,19 +1,16 @@
 # databricks-connect-notebook
-A Jupyter Server with support to Databricks Connect.
+
+[![docker pulls](https://img.shields.io/docker/pulls/viniro/databricks-connect-notebook.svg)](https://hub.docker.com/r/viniro/databricks-connect-notebook/)
+[![docker stars](https://img.shields.io/docker/stars/viniro/databricks-connect-notebook.svg)](https://hub.docker.com/r/viniro/databricks-connect-notebook/)
+[![image size](https://img.shields.io/docker/image-size/viniro/databricks-connect-notebook/latest)](https://hub.docker.com/r/viniro/databricks-connect-notebook/ "viniro/databricks-connect-notebook image size")
+
+A Docker Image that provides a Jupyter notebook server with support to Databricks Connect.
 
 This can be used to access your Databricks environment from your IDE and send jobs directly into a cluster.
 
+## Sources
 
-## Execution
-
-1. Create a `.databricks-connect` file under the `workspace` folder with your information.;
-2. Build the docker environment;
-3. `docker compose up`
-5. Connect your IDE to the notebook server;
-6. Have fun!
-
-
-## Sources 
 This environment is based on:
+
 - [Jupyter's Docker Stacks](https://github.com/jupyter/docker-stacks)
 - [eclipse-temurin](https://github.com/docker-library/repo-info/tree/master/repos/eclipse-temurin)
